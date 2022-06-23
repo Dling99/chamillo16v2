@@ -7,7 +7,7 @@
         {{ display.pluginPanel('main-top', plugin_main_top) }}
     {% endif %}
     <div class="row">
-        <div class="col-md-9 col-md-push-3">
+        <div class="col-md-0 col-md-push-0">
             <div class="page-content">
                 {% if plugin_content_top %}
                     <div class="page-content-top">
@@ -68,6 +68,7 @@
                 {% endif %}
             </div>
         </div>
+        <!-- CAMBIO: QUITAR SIDEBAR PERFIL
         <div class="col-md-3 col-md-pull-9">
             <div class="sidebar">
                 {% if plugin_menu_top %}
@@ -82,22 +83,22 @@
                         {{ user_image_block }}
                     {% endif %}
 
-                    <!-- BLOCK PROFILE -->
+                    BLOCK PROFILE
                     {% if profile_block %}
                         {{ display.collapseMenu('profile', 'Profile'|get_lang, profile_block) }}
                     {% endif %}
 
-                    <!-- BLOCK COURSE -->
+                    BLOCK COURSE
                     {% if course_block %}
                         {{ display.collapseMenu('courses', 'Courses'|get_lang, course_block) }}
                     {% endif %}
 
-                    <!-- BLOCK SKILLS -->
+                    BLOCK SKILLS
                     {% if skills_block %}
                         {{ display.collapseMenu('skills', 'Skills'|get_lang, skills_block) }}
                     {% endif %}
 
-                    <!-- BLOCK WORK -->
+                    BLOCK WORK
                     {% if student_publication_block %}
                         {{ display.collapseMenu('student_publications', 'StudentPublications'|get_lang, student_publication_block) }}
                     {% endif %}
@@ -145,15 +146,15 @@
                     </div>
                     {% endif %}
                     {{ certificates_search_block }}
-                    <!-- BLOCK NOTICE -->
+                    BLOCK NOTICE
                     {% if notice_block %}
                         {{ display.collapse('notice', 'Notice'|get_lang, notice_block) }}
                     {% endif %}
-                    <!-- BLOCK HELP -->
+                    BLOCK HELP
                     {% if help_block %}
                         {{ display.collapse('help', 'MenuGeneral'|get_lang, help_block, true) }}
                     {% endif %}
-                    <!-- BLOCK LINKS NAVIGATION -->
+                    BLOCK LINKS NAVIGATION
                     {% if navigation_links %}
                         {{ display.collapseFor('navigation_sidebar', 'MainNavigation'|get_lang, navigation_links) }}
                     {% endif %}
@@ -166,6 +167,8 @@
                 {% endif %}
             </div>
         </div>
+
+        -->
     </div>
     {% if plugin_main_bottom %}
         {{ display.pluginPanel('main-bottom', plugin_main_bottom) }}
